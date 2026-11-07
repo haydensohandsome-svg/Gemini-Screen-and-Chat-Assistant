@@ -222,7 +222,7 @@ class GeminiAssistantApp:
         bbox = (target_win.left, target_win.top, target_win.left + target_win.width, target_win.top + target_win.height)
         img = ImageGrab.grab(bbox=bbox)
         
-        max_dim = 800
+        max_dim = 1200
         if img.width > max_dim or img.height > max_dim:
             img.thumbnail((max_dim, max_dim), Image.Resampling.LANCZOS)
         return img
